@@ -29,8 +29,8 @@ class DemoSimpleCalculationsMicroservice extends Simulation {
 			.headers(headers_0)
 			.body(RawFileBody("DemoSimpleCalculationsMicroservice_0000_request.txt")))
 
-     	setUp(scn.inject(rampUsersPerSec(1) to 1000 during(1 minutes)).protocols(httpProtocol))
-//  	setUp(scn.inject(constantUsersPerSec(220) during(1 minutes)).protocols(httpProtocol))
+	   // 	setUp(scn.inject(rampUsersPerSec(1) to 1000 during(1 minutes)).protocols(httpProtocol))
+   	setUp(scn.inject(constantUsersPerSec(220) during(1 minutes)).protocols(httpProtocol))
 
 
 }
