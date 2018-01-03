@@ -24,5 +24,5 @@ class RecordedSimulation2 extends Simulation {
 			.headers(headers_0)
 			.check(status.is(403)))
 
-	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+	setUp(scn.inject(atOnceUsers(10000))).protocols(httpProtocol)
 }

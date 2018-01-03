@@ -5,7 +5,7 @@ import io.gatling.http.Predef._
 class RecordedSimulation extends Simulation {
 
 	val httpProtocol = http
-		.baseURL("http://ua1-paas-tv:9999")
+		.baseURL("http://kyiv-win-inf01:9999")
 		.inferHtmlResources()
 		.acceptHeader("*/*")
 		.contentTypeHeader("text/plain")
@@ -23,7 +23,6 @@ class RecordedSimulation extends Simulation {
 		.exec(http("request_0")
 			.post("/Sql/DemoAccountingMicroservice/healthCheck")
 			.headers(headers_0)
-			.body(RawFileBody("RecordedSimulation_0000_request.txt"))
 			.check(status.is(200)))
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
