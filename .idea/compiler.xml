@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AutoTest" />
+        <module name="Gatling" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AutoTest" target="1.5" />
+      <module name="Gatling" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
